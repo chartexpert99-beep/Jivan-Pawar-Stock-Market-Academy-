@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jivan Pawar Trading Academy — structured stock market education in English, Hindi and Marathi.">
+<meta name="theme-color" content="#071426">
+<title>Jivan Pawar Trading Academy</title>
+<style>
+:root{--navy:#071426;--navy2:#0d2039;--panel:#102744;--gold:#d8b35d;--gold2:#f0d58c;--white:#f7f8fb;--muted:#aebbd0;--line:rgba(216,179,93,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(7,20,38,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}.brandmark{width:42px;height:42px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:20px}.brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:2px}.links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:9px;padding:11px 18px;font-weight:700;cursor:pointer;transition:.2s}.btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#101b2a}.btn.ghost{color:var(--gold2);background:transparent}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero{padding:88px 0 76px;background:radial-gradient(ellipse at 80% 30%,rgba(216,179,93,.13),transparent 38%),linear-gradient(140deg,#071426,#0c1e35 65%,#102744);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.eyebrow{color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.08;margin:16px 0 20px;letter-spacing:-1.7px}.hero h1 span{color:var(--gold2)}.hero p{max-width:620px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-card{border:1px solid var(--line);border-radius:22px;padding:28px;background:linear-gradient(145deg,rgba(16,39,68,.94),rgba(7,20,38,.95));box-shadow:0 24px 70px #0005}.hero-card .monogram{height:190px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#173454,#09182b);border:1px solid var(--line);color:var(--gold2);font-size:70px;font-weight:900;letter-spacing:5px}.hero-card h3{margin:20px 0 4px}.hero-card p{font-size:13px;margin:0}
+section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.section-head h2{font-size:clamp(28px,4vw,40px);margin:8px 0;color:var(--white)}.section-head p{color:var(--muted);margin:0}.gold{color:var(--gold2)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#102744,#0b1c31);border:1px solid var(--line);border-radius:16px;padding:24px}.icon{width:44px;height:44px;border-radius:12px;background:#d8b35d18;color:var(--gold2);display:grid;place-items:center;font-size:21px}.card h3{margin:16px 0 7px}.card p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-block;margin-top:17px;color:var(--gold2);font-size:12px;font-weight:700;letter-spacing:.8px}
+.about{background:#0a1a2e;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.about-art{min-height:270px;border-radius:20px;border:1px solid var(--line);background:radial-gradient(circle at 50% 40%,#24476c,#0c1d32 70%);display:grid;place-items:center;color:var(--gold2);font-size:64px;font-weight:900}.about-copy p{color:var(--muted)}
+.langs{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.lang{border:1px solid var(--line);padding:7px 13px;border-radius:99px;color:var(--gold2);font-size:13px}
+.cta{background:linear-gradient(120deg,#122b49,#0b1b30);border:1px solid var(--line);border-radius:22px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta p{color:var(--muted);margin-bottom:0}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:30;padding:20px;align-items:center;justify-content:center}.modal.show{display:flex}.modal-box{width:min(420px,100%);background:#0d2039;border:1px solid var(--line);border-radius:18px;padding:28px;position:relative}.close{position:absolute;right:17px;top:12px;background:none;border:0;color:var(--muted);font-size:26px;cursor:pointer}.modal-box h2{margin:0 0 5px}.modal-box p{color:var(--muted);font-size:13px}.field{display:block;width:100%;margin:14px 0;padding:13px 14px;border-radius:9px;border:1px solid #34506e;background:#071426;color:white;font:inherit}.notice{font-size:12px!important;color:#e8cc86!important;background:#d8b35d12;padding:10px;border-radius:8px}
+@media(max-width:800px){.links{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding:62px 0}.hero-card{max-width:480px}.grid{grid-template-columns:1fr 1fr}.cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.nav{height:68px}.brand{font-size:13px}.brandmark{width:38px;height:38px}.hero h1{font-size:42px}.hero p{font-size:15px}.cta{padding:25px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="brandmark">JP</span><span>JIVAN PAWAR<small>TRADING ACADEMY</small></span></a>
+    <nav class="links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <button class="btn primary" onclick="openLogin()">Student Login</button>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Learn the markets with clarity</div>
+        <h1>Build your market knowledge.<br><span>Trade with discipline.</span></h1>
+        <p>Welcome to Jivan Pawar Trading Academy — a learning platform for people who want to understand the stock market, technical analysis, options and risk management through structured education.</p>
+        <div class="actions"><a class="btn primary" href="#courses">Explore Courses</a><button class="btn ghost" onclick="openLogin()">Student Login</button></div>
+      </div>
+      <div class="hero-card">
+        <div class="monogram">JP</div>
+        <h3>Jivan Pawar</h3>
+        <p>Financial Advisor And Trader</p>
+        <div class="tag">STOCK MARKET EDUCATION</div>
+      </div>
+    </div>
+  </section>
+  <section id="courses">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Learn step by step</div><h2>Explore <span class="gold">Our Learning Paths</span></h2><p>Start with the fundamentals and build your understanding one lesson at a time.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">📘</div><h3>Stock Market Basics</h3><p>Understand exchanges, indices, orders, market participants and essential terminology.</p><span class="tag">BEGINNER LEVEL</span></article>
+        <article class="card"><div class="icon">📊</div><h3>Technical Analysis</h3><p>Learn chart reading, trends, support and resistance, candlesticks and indicators.</p><span class="tag">FOUNDATION TO ADVANCED</span></article>
+        <article class="card"><div class="icon">⚖️</div><h3>Options Education</h3><p>Explore calls, puts, option chains, premiums, expiry and payoff concepts.</p><span class="tag">DERIVATIVES</span></article>
+        <article class="card"><div class="icon">🛡️</div><h3>Risk Management</h3><p>Study position sizing, stop-loss planning, drawdowns and trading discipline.</p><span class="tag">ESSENTIAL SKILL</span></article>
+        <article class="card"><div class="icon">🎥</div><h3>Recorded Lessons</h3><p>Revisit lessons and learning materials at your own pace. Student access will be added in the next stage.</p><span class="tag">COMING SOON</span></article>
+        <article class="card"><div class="icon">🎙️</div><h3>Live Learning</h3><p>Join planned educational sessions, market concepts and Q&amp;A activities.</p><span class="tag">COMING SOON</span></article>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-art">JP</div>
+      <div class="about-copy"><div class="eyebrow">Your learning journey</div><h2>Learn with <span class="gold">Jivan Pawar</span></h2><p>Our goal is to make stock market education structured, practical and accessible. Learn concepts, understand risk and develop your own informed approach to markets.</p><p>Lessons are planned in three languages so more learners can participate comfortably.</p><div class="langs"><span class="lang">English</span><span class="lang">हिन्दी</span><span class="lang">मराठी</span></div></div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="wrap"><div class="cta"><div><div class="eyebrow">Take the first step</div><h2 style="margin:8px 0">Ready to start learning?</h2><p>Explore the learning paths or use the student login when your account is activated.</p></div><button class="btn primary" onclick="openLogin()">Student Login</button></div></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Jivan Pawar Trading Academy</span><span>Educational content only. Trading involves risk; no returns are guaranteed.</span></div></footer>
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" onclick="if(event.target===this)closeLogin()">
+  <div class="modal-box"><button class="close" aria-label="Close" onclick="closeLogin()">×</button><h2 id="loginTitle">Student Login</h2><p>Student accounts will be activated in the next development stage.</p><form onsubmit="demoLogin(event)"><input class="field" type="text" placeholder="Student ID or email" autocomplete="username" required><input class="field" type="password" placeholder="Password" autocomplete="current-password" required><button class="btn primary" style="width:100%" type="submit">Continue</button></form><p class="notice">Preview only: this form does not authenticate users or store passwords. Please do not enter a real password.</p></div>
+</div>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+function openLogin(){document.getElementById('loginModal').classList.add('show')}
+function closeLogin(){document.getElementById('loginModal').classList.remove('show')}
+function demoLogin(e){e.preventDefault();alert('Student login will be connected after secure account setup. This preview does not sign you in.');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLogin()});
+</script>
+</body>
+</html>
